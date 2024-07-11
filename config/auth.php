@@ -40,10 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-		'api' => [
+		 'api' => [
+            'driver' => 'passport',
+            'provider' => 'users', // This is the change i made default was users and i don't have users providers
+        ],
+		/*'api' => [
 			'driver' => 'passport',
 			'provider' => 'Patient',//users
-		],
+		],*/
     ],
 
     /*

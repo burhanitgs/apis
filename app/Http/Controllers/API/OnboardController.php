@@ -5,6 +5,7 @@
         use Illuminate\Http\Request;
         use App\Http\Controllers\API\BaseController as BaseController;
         use App\Models\User;
+		use App\Models\Patient;
 		use App\Models\Onboard;
         use Illuminate\Support\Facades\Auth;
         use Validator;
@@ -32,6 +33,7 @@
             */
             public function store(Request $request)
             {
+				$user = Auth::User();
                 $input = $request->all();
  
                 $validator = Validator::make($input, [

@@ -100,10 +100,10 @@ class PatientController extends BaseController
             {
                 if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){ 
                     $user = Auth::User();
-					/*if($user->email_verified_at==null)
+					if($user->email_verified_at==null)
 					{
 						return $this->sendError('usernotverfied.', ['error'=>'User not verified,kindly verify user inorder to proceed']);
-					}*/
+					}
                     $success['token'] =  $user->createToken('MyApp')-> accessToken; 
                     $success['name'] =  $user->name;
 					$success['first_name'] =  $user->first_name;
