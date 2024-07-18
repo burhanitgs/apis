@@ -112,6 +112,7 @@ class PatientController extends BaseController
 					$success['phone_number'] =  $user->phone_number;
 					$success['address'] =  $user->address;
 					$success['date_of_birth'] =  $user->date_of_birth;
+					//$success['gender'] =  $user->date_of_birth;
                     return $this->sendResponse($success, 'User login successfully.');
                 } 
                 else{ 

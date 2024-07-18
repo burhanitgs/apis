@@ -35,7 +35,7 @@
             {
 				$user = Auth::User();
                 $input = $request->all();
- 
+				$input['user_id']=$user->id;
                 $validator = Validator::make($input, [
                     'birth_sex' => 'required',
                     'employment_status' => 'required',
@@ -52,8 +52,9 @@
                     return $this->sendError('Validation Error.', $validator->errors());       
                 }
 				
-                $Onboard = Onboard::create($input);
-				
+                //$Onboard = Onboard::create($input);
+				$Onboard = Onboard::updateOrCreate(['user_id'=>$user->id],$input);
+
                 return $this->sendResponse(new OnboardResource($Onboard), 'Onboard created successfully.');
             } 
  

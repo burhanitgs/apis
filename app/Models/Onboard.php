@@ -14,6 +14,6 @@
              */
             protected $fillable = [
                 'birth_sex', 'employment_status','occupation','education_level',
-				'total_children','pregnant','gestation','expected_babies'
+				'total_children','pregnant','gestation','expected_babies','user_id'
             ];
         }

@@ -25,6 +25,7 @@ class Onboard extends JsonResource
 				'pregnant' => $this->pregnant,
 				'gestation' => $this->gestation,
 				'expected_babies' => $this->expected_babies,
+				'user_id' => $this->user_id,
 				'created_at' => $this->created_at->format('d/m/Y'),
 				'updated_at' => $this->updated_at->format('d/m/Y'),
 			];

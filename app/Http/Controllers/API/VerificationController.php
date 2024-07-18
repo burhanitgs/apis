@@ -7,7 +7,8 @@ use Illuminate\Foundation\Auth\VerifiesEmails;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Verified;
 use App\Http\Resources\UserResource;
-
+use App\Models\Patient;
+use Illuminate\Support\Facades\Auth;
 class VerificationController extends Controller
 {
     use VerifiesEmails;
